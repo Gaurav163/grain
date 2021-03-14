@@ -8,6 +8,7 @@ const userSchema = new schema(
     email: String,
     password: String,
     state: String,
+    level: String,
   },
   {
     timestamp: {

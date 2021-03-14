@@ -18,9 +18,11 @@ router.route("/login").post(async (req, res) => {
       res.json({ message: "Wrong password" });
     } else {
       const userr = {
-        username: user.username,
-        name: user.username,
+        name: user.name,
         email: user.email,
+        state: user.state,
+        level: user.level,
+        valid: Date.now(),
       };
       const token = jwt.sign(userr, process.env.JWT_secret_token);
 
