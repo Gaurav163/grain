@@ -33,9 +33,7 @@ class App extends Component {
           />
           <Route
             path="/dashboard"
-            render={(props) =>
-              user ? <Dashboard /> : <Redirect to="/login" />
-            }
+            render={(props) => (user ? <Dashboard /> : <Login />)}
           />
           <Route
             path="/"
